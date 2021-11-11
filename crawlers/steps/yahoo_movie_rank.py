@@ -4,7 +4,7 @@ from pprint import pprint
 
 
 def YMR(url):
-    global release_date
+    global release_date, colname, contents
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')
     rows = soup.find_all('div', class_='tr')
