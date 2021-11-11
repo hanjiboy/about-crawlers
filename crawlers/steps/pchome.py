@@ -15,7 +15,6 @@ def PChome(url):
                 product_name = d['name']
                 product_price = d['price']
                 lists.append({'product_name': product_name, 'product_price': product_price})
-            # pprint(lists)
 
             for product in lists:
                 client.PChome.itemlists.insert_one(product)
